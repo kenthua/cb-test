@@ -5,6 +5,10 @@ steps:
            'us-central1-docker.pkg.dev/${PROJECT_ID}/image-repo/myimage', 
            '.']
 
+  - name: 'k8s.gcr.io/busybox'
+    args: ['/bin/sh', '-c',
+           'touch /tmp/healthy; sleep 120']
+
   # Docker Push
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 
