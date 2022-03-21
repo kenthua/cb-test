@@ -7,7 +7,7 @@ steps:
 
   - name: 'k8s.gcr.io/busybox'
     args: ['/bin/sh', '-c',
-           'touch /tmp/healthy; sleep 61']
+           'touch /tmp/healthy; sleep 60']
 
   # Docker Push
   - name: 'gcr.io/cloud-builders/docker'
