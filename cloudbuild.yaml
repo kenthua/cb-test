@@ -14,4 +14,5 @@ steps:
     args: ['push', 
            'us-central1-docker.pkg.dev/${PROJECT_ID}/image-repo/myimage']
            
-images: us-central1-docker.pkg.dev/${PROJECT_ID}/image-repo/myimage
+images: 
+- "us-central1-docker.pkg.dev/${PROJECT_ID}/image-repo/myimage"
