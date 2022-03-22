@@ -13,6 +13,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 
            'us-central1-docker.pkg.dev/${PROJECT_ID}/image-repo/myimage']
-           
-images: 
+options:
+  requestedVerifyOption: VERIFIED    
+images:
 - "us-central1-docker.pkg.dev/${PROJECT_ID}/image-repo/myimage"
