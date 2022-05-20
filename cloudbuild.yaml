@@ -13,8 +13,10 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 
            'us-central1-docker.pkg.dev/${PROJECT_ID}/image-repo/myimage']
+logsBucket: "gs://packt-cloudbuild-dev-bucket"
 options:
   requestedVerifyOption: VERIFIED
-  logging: CLOUD_LOGGING_ONLY
+  #logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
 images:
 - "us-central1-docker.pkg.dev/${PROJECT_ID}/image-repo/myimage"
